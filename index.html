@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Список задач</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Список задач</h1>
+                <p>Запишите, что нужно сделать, и отмечайте готовое.</p>
+            </header>
+            <section aria-label="Мои задачи">
+                <form>
+                    <input
+                        id="task"
+                        aria-label="Новая задача"
+                        placeholder="Например, купить продукты"
+                        required
+                    />
+                    <button type="submit">Добавить</button>
+                </form>
+                <ul aria-label="Задачи"></ul>
+                <p id="summary" role="status"></p>
+            </section>
+        </main>
+        <template id="task-row">
+            <li>
+                <label>
+                    <input type="checkbox" />
+                    <span></span>
+                </label>
+                <button type="button">Удалить</button>
+            </li>
+        </template>
+    </body>
+</html>
